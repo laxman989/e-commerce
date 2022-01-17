@@ -1,0 +1,31 @@
+.category-product-list {
+    margin-top: 3.4rem;
+    padding: 2rem;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: auto auto auto auto auto;
+}
+
+@media only screen and (max-width:1450px){
+    .category-product-list {
+        grid-template-columns: auto auto auto auto;
+    }
+}
+
+@media only screen and (max-width:1150px){
+    .category-product-list {
+        grid-template-columns: auto auto auto;
+    }
+}
+
+@media only screen and (max-width: 870px){
+    .category-product-list {
+        grid-template-columns: auto;
+    }
+}
+
+@media only screen and (max-width: 570px){
+    .category-product-list {
+        grid-template-columns: auto;
+    }
+}

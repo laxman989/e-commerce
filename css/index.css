@@ -1,0 +1,246 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Navigation Bar */
+nav {
+    z-index: 10;
+    position: fixed;
+    top: 0%;
+    height: 3.4rem;
+    width: 100%;
+    background-color: #3974cc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav .logo{
+    width: 5rem;
+}
+
+nav .search-bar{
+    margin-left: 1rem;
+    margin-right: 10rem;
+}
+
+nav .search-box{
+    width: 24rem;
+    padding: 0.5rem 1rem;
+    outline: none;
+    border: none;
+    border-radius: 0.1rem;
+}
+
+nav .search-btn{
+    padding: 0.5rem 1rem;
+    color: #3974cc;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 0.1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+nav .links{
+    margin-left: 10rem;
+}
+nav .links a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0rem 0.5rem;
+}
+nav .links .login-btn{
+    margin: 0rem 0.5rem;
+    padding: 0.5rem 1.5rem;
+    color: #3974cc;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 0.1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.offers {
+    margin-bottom: 1rem;
+    box-shadow: 0px 0px 10px #d1d1d1;
+}
+
+.offers img {
+    width: calc(100% - 1rem);
+    margin: 0.5rem;
+}
+
+/* Category List */
+.category-list {
+    margin-top: 3.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 1rem;
+    box-shadow: 0px 0px 10px #d1d1d1;
+}
+
+.category-card {
+    height: auto;
+    width: 6rem;
+    padding: 0.5rem;
+    /* background-color: #3974cc; */
+    margin: 1rem 2rem;
+    cursor: pointer;
+}
+
+.category-card:hover.category-card p {
+    color: #3974cc;
+}
+
+.category-card img {
+    display: block;
+    width: 80%;
+    margin: auto;
+}
+.category-card p {
+    font-weight: bold;
+    text-align: center;
+}
+
+
+/* Product List  */
+.product-list {
+    padding: 1rem;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: auto auto auto auto auto;
+    /* justify-content: flex-start; */
+}
+  
+.product-card {
+    cursor: pointer;
+    padding: 1rem 1rem;
+    border-radius: 0.2rem;
+    box-shadow: 3px 3px 6px #d8d8d8;
+    transition: all 0.5s ease-in-out;
+}
+
+
+.product-card:hover {
+    box-shadow: 0px 0px 8px #868686;
+    /* padding: 0.5rem; */
+}
+
+.product-card .product-image {
+    object-fit: contain;
+    display: block;
+    width: 15rem;
+    height: 19rem;
+    margin: auto;
+    transition: all 0.5s ease-in-out;
+
+}
+
+.product-card .product-brand {
+    font-size: 1rem;
+    font-weight: bold;
+    opacity: 0.5;
+}
+
+.product-card .product-label {
+    font-size: 1rem;
+}
+
+.product-card .product-final-price {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-right: 0.5rem;
+}
+.product-card .product-price {
+    font-size: 1.1rem;
+    opacity: 0.5;
+    text-decoration: line-through;
+    margin-right: 0.5rem;
+}
+.product-card .product-discount-percentage {
+    font-size: 1rem;
+    margin-right: 0.5rem;
+    color: #00d81d;
+}
+
+.product-card .product-rating .star-icon {
+    font-size: 1rem;
+    color: #d3d023;
+    margin-right: 0.2rem;
+}
+
+
+@media only screen and (max-width:1450px){
+    .product-list {
+        grid-template-columns: auto auto auto auto;
+    }
+}
+
+@media only screen and (max-width:1150px){
+    body {
+        font-size: 14px;
+    }
+    .product-list {
+        grid-template-columns: auto auto auto;
+    }
+    nav .links{
+        margin-left: 4rem;
+    }
+    nav .search-bar{
+        margin-right: 4rem;
+    }  
+    nav .search-box{
+        width: 18rem;
+    }
+    .category-card {
+        margin: 1rem 1rem;
+    }
+}
+
+@media only screen and (max-width: 870px){
+    .product-list {
+        grid-template-columns: auto auto;
+    }
+    nav .links{
+        display: none;
+    } 
+    .category-card {
+        margin: 1rem 0.5rem;
+        width: 5rem;
+        padding: 0.2rem;
+    }
+    .category-list {
+        flex-wrap: wrap;
+    }
+}
+
+@media only screen and (max-width: 570px){
+    body {
+        font-size: 12px;
+    }
+    .product-list {
+        grid-template-columns: auto;
+    }
+    nav .search-bar{
+        margin-right: 0rem;
+    }  
+    nav .search-box{
+        width: 12rem;
+    }
+    nav .logo{
+        width: 4rem;
+    }
+    nav .search-btn {
+        display: none;
+    }
+}
+  
